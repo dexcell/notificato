@@ -169,14 +169,14 @@ class Certificate implements \Serializable
 		}
 
 		// If a passphrase is given, the private key may not be loaded without it
-		if ($this->getPassphrase() != null)
-		{
-			// Try to load the private key without the passphrase (should fail)
-			$privateKey = openssl_pkey_get_private('file://' . $this->getPemFile() );
-			if (false !== $privateKey) {
-				throw new InvalidCertificateException('Passphrase given, but the private key in "' . $this->getPemFile() . '" is not encrypted, please make sure you are using the correct certificate/passphrase combination.');
-			}
-		}
+		// if ($this->getPassphrase() != null)
+		// {
+		// 	// Try to load the private key without the passphrase (should fail)
+		// 	$privateKey = openssl_pkey_get_private('file://' . $this->getPemFile() );
+		// 	if (false !== $privateKey) {
+		// 		throw new InvalidCertificateException('Passphrase given, but the private key in "' . $this->getPemFile() . '" is not encrypted, please make sure you are using the correct certificate/passphrase combination.');
+		// 	}
+		// }
 	}
 
 	/**
