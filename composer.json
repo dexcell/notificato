@@ -1,5 +1,5 @@
 {
-	"name": "wrep/notificato",
+	"name": "dexcell/notificato",
 	"type": "library",
 	"description": "Takes care of push notifications in your PHP projects.",
 	"homepage": "https://github.com/mac-cain13/notificato",
